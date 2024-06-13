@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-06-13T09:53:23.287679" rpa="false" schemaversion="5">
+<suite id="s1" name="Open Application" source="C:\Users\willy.barmasai\PycharmProjects\Android_Project\Tests\Open_Application.robot">
+<test id="s1-t1" name="Sign-In and Allow or Deny Access to Photos, Media, and Files" line="197">
+<kw name="Open Application" owner="AppiumLibrary">
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2024-06-13T09:54:23.983052" level="FAIL">No application is open</msg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" start="2024-06-13T09:54:23.982547" elapsed="0.003513">No application is open</status>
+</kw>
+<msg time="2024-06-13T09:54:23.987066" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2024-06-13T09:54:23.987066" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Error getting device API level. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\willy.barmasai\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5556 shell getprop ro.build.version.sdk' timed out after 20000ms'. Try to increase the 20000ms adb execution timeout represented by 'adbExecTimeout' capability
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Error getting device API level. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\willy.barmasai\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5556 shell getprop ro.build.version.sdk' timed out after 20000ms'. Try to increase the 20000ms adb execution timeout represented by 'adbExecTimeout' capability
+    at getResponseForW3CError (C:\Users\willy.barmasai\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.js:1145:9)
+    at asyncHandler (C:\Users\willy.barmasai\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:491:57)</msg>
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${PACKAGE_INSTALLER_PACKAGE}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="FAIL" start="2024-06-13T09:53:23.439754" elapsed="60.548306">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Error getting device API level. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\willy.barmasai\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5556 shell getprop ro.build.version.sdk' timed out after 20000ms'. Try to increase the 20000ms adb execution timeout represented by 'adbExecTimeout' capability
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Error getting device API level. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\willy.barmasai\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5556 shell getprop ro.build.version.sdk' timed out after 20000ms'. Try to increase the 20000ms adb execution timeout represented by 'adbExecTimeout' capability
+    at getResponseForW3CError (C:\Users\willy.barmasai\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.js:1145:9)
+    at asyncHandler (C:\Users\willy.barmasai\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:491:57)</status>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text='My CRB Status']</arg>
+<arg>timeout=${WAIT_TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="NOT RUN" start="2024-06-13T09:54:23.988060" elapsed="0.001021"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.widget.Button[@text='Get Started']</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" start="2024-06-13T09:54:23.989081" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<arg>xpath=//android.widget.ImageView[@resource-id='com.metropol.crystobol:id/close']</arg>
+<arg>timeout=${WAIT_TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="NOT RUN" start="2024-06-13T09:54:23.989081" elapsed="0.000505"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[contains(@text, 'signing-in')]</arg>
+<arg>timeout=${WAIT_TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="NOT RUN" start="2024-06-13T09:54:23.989586" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-06-13T09:54:23.989586" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<arg>xpath=//android.widget.EditText[@resource-id='com.metropol.crystobol:id/sign_in_phone']</arg>
+<arg>timeout=${WAIT_TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="NOT RUN" start="2024-06-13T09:54:23.989586" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<arg>xpath=//android.widget.EditText[@resource-id='com.metropol.crystobol:id/sign_in_phone']</arg>
+<arg>${VALID_PHONE}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="NOT RUN" start="2024-06-13T09:54:23.989586" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<arg>xpath=//android.widget.EditText[@resource-id='com.metropol.crystobol:id/sign_in_password']</arg>
+<arg>timeout=${WAIT_TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="NOT RUN" start="2024-06-13T09:54:23.989586" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<arg>xpath=//android.widget.EditText[@resource-id='com.metropol.crystobol:id/sign_in_password']</arg>
+<arg>${VALID_PIN}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="NOT RUN" start="2024-06-13T09:54:23.989586" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<arg>xpath=//android.widget.Button[@resource-id='com.metropol.crystobol:id/sign_in_button']</arg>
+<arg>timeout=${WAIT_TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="NOT RUN" start="2024-06-13T09:54:23.989586" elapsed="0.000000"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="AppiumLibrary">
+<arg>xpath=//android.widget.Button[@resource-id='com.metropol.crystobol:id/sign_in_button']</arg>
+<doc>Verifies that element identified with locator is enabled.</doc>
+<status status="NOT RUN" start="2024-06-13T09:54:23.989586" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<arg>xpath=//android.widget.Button[@resource-id='com.metropol.crystobol:id/sign_in_button']</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="NOT RUN" start="2024-06-13T09:54:23.989586" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<arg>sign_in_success.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="NOT RUN" start="2024-06-13T09:54:23.990590" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text='Welcome']</arg>
+<arg>timeout=${WAIT_TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="NOT RUN" start="2024-06-13T09:54:23.990590" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${ALLOW_PERMISSION}' == '${TRUE}'</arg>
+<arg>Allow Access to Photos, Media, and Files</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" start="2024-06-13T09:54:23.990590" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${ALLOW_PERMISSION}' == '${FALSE}'</arg>
+<arg>Deny Access to Photos, Media, and Files</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" start="2024-06-13T09:54:23.990590" elapsed="0.000000"/>
+</kw>
+<doc>Sign in with valid credentials and then allow or deny Crystobol access to photos, media, and files on your device.</doc>
+<status status="FAIL" start="2024-06-13T09:53:23.439249" elapsed="60.551341">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Error getting device API level. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\willy.barmasai\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5556 shell getprop ro.build.version.sdk' timed out after 20000ms'. Try to increase the 20000ms adb execution timeout represented by 'adbExecTimeout' capability
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: Error getting device API level. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\willy.barmasai\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5556 shell getprop ro.build.version.sdk' timed out after 20000ms'. Try to increase the 20000ms adb execution timeout represented by 'adbExecTimeout' capability
+    at getResponseForW3CError (C:\Users\willy.barmasai\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\errors.js:1145:9)
+    at asyncHandler (C:\Users\willy.barmasai\AppData\Roaming\npm\node_modules\appium\node_modules\@appium\base-driver\lib\protocol\protocol.js:491:57)</status>
+</test>
+<status status="FAIL" start="2024-06-13T09:53:23.310296" elapsed="60.680294"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Open Application">Open Application</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-06-13T09:54:23.987066" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>
